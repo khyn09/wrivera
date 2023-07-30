@@ -55,14 +55,14 @@ nav {
     width: 100%;
     box-sizing: border-box;
     padding: 10px 50px;
-    background-color: #c9c9c9;
+    background-color: #FFFFFF;
     z-index: 1;
 }
 nav ul {
     list-style: none;
-    width: 100%;
-    text-align: right;
-    padding-left: 550px;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 nav ul li {
     display: inline-block;
@@ -85,13 +85,47 @@ nav ul li {
     color: #000000;
     font-family: Poppins;
 }
-.menu li a:hover,
-.menu li a.active {
-    background-color: #ffffff;
-    color: #292929 !important;
-    font-weight: 650;
-    transition: all ease 0.4s;
+/* Reset default list styles */
+ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Style the menu items */
+  ul.menu li {
+    display: inline-block;
+    position: relative; /* Needed to position the pseudo-element */
+    margin-right: 20px; /* Add spacing between menu items */
+  }
+  
+  /* Style the menu links */
+  ul.menu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    transition: border-bottom 0.3s; /* Add smooth transition to the bottom line */
+  }
+  
+  /* Add the bottom line as a pseudo-element when hovering */
+  ul.menu li a::after {
+    content: "";
+    display: block;
+    width: 0; /* Start with a width of 0 */
+    height: 2px; /* Set the height of the bottom line */
+    background-color: #17d1ac; /* Change this color to your desired hover color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s; /* Add smooth transition to the line width */
+  }
+  
+  /* Expand the bottom line width on hover */
+  ul.menu li a:hover::after {
+    width: 100%; /* Set the width to 100% on hover to expand the line */
+    
 }
+
 .name {
     font-family: Poppins;
     width: 500px;
@@ -170,6 +204,7 @@ nav ul li {
     font-size: 2rem;
     margin-bottom: 20px;
     text-transform: uppercase;
+    letter-spacing: 5px;
 }
 .about-text h5 {
     letter-spacing: 2px;
@@ -186,17 +221,16 @@ nav ul li {
 }
 button {
     font-style: Poppins;
-    background-color: #727272;
+    background-color: #42faeb;
     color: var(--primary-color);
     width: 150px;
     height: 40px;
     border: none;
     font-size: 1rem;
-    font-weight: bold;
     cursor: pointer;
 }
 button:hover {
-    background-color: #17d1ac;
+    background-color: #42faeb;
     color: var(--secondary-color);
     width: 150px;
     height: 40px;
@@ -219,13 +253,9 @@ button:hover {
     padding: 0px;
     text-transform: uppercase;
     font-family: Poppins;
-}
-.s-heading p {
-    color: var(--secondary-color);
-    font-size: 1rem;
-    margin: 0px;
-    padding: 0px;
-    font-family: Poppins;
+    letter-spacing: 5px;
+    border-bottom: 2px solid #17d1ac;
+    padding-bottom: 5px;
 }
 .s-heading {
     text-align: center;
@@ -354,6 +384,8 @@ button:hover {
     padding: 0px;
     text-transform: uppercase;
     font-family: Poppins;
+    letter-spacing: 5px;
+    border-bottom: 2px solid #17d1ac;
 }
 .e-text h2, h3 {
     color: var(--secondary-color);
@@ -370,7 +402,7 @@ button:hover {
 }
 .e-box {
     width: 500px;
-    height: 450px;
+    height: 500px;
     margin: 15px;
     border-radius: 10px;
     overflow: hidden;
@@ -385,172 +417,273 @@ button:hover {
 .e-text p {
     color: var(--secondary-color)
 }
-@media(max-width: 1190px) {
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+  }
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  
+  @keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }
+
+/* Base styles for all screen sizes */
+
+/* Add your base styles here */
+
+/* Media queries for different screen sizes */
+
+/* Medium-sized screens (max-width: 1190px) */
+@media (max-width: 1190px) {
+    /* Adjust the styles as needed for medium-sized screens */
     #main {
-        background-image: none !important;
+      background-image: none !important;
     }
+  
     .name {
-        left: 10%;
-        top: 50%;
-        transform: translate(-10%, -50%);
+      left: 10%;
+      top: 50%;
+      transform: translate(-10%, -50%);
     }
+  
     .social {
-        left: 4%;
+      left: 4%;
     }
+  
     .about-text {
-        padding-left: 5%;
+      padding-left: 5%;
     }
+  
     .image {
-        height: 400px;
+      height: 400px;
     }
+  
     #services {
-        height: auto;
+      height: auto;
     }
+  
     .s-b-container {
-        flex-wrap: wrap;
+      flex-wrap: wrap;
     }
+  
     .s-box {
-        flex-grow: 1;
+      flex-grow: 1;
     }
+  
     .s-b-text {
-        text-align: center;
+      text-align: center;
     }
+  
     #experience {
-        height: auto;
+      height: auto;
     }
+  
     .e-container {
-        flex-wrap: wrap;
+      flex-wrap: wrap;
     }
+  
     .e-box {
-        flex-grow: 1;
+      flex-grow: 1;
     }
+  
     .e-text {
-        text-align: center;
+      text-align: center;
     }
-}
-@media (max-width:999px) {
+  }
+  
+  /* Small-sized screens (max-width: 999px) */
+  @media (max-width: 999px) {
+    /* Adjust the styles as needed for small-sized screens */
     #main {
-        background-image: none !important;
+      background-image: none !important;
     }
+  
     .social {
-        left: 4%;
+      left: 4%;
     }
+  
     .image {
-        height: 400px;
-        width: 430px;
+      height: 400px;
+      width: 430px;
     }
+  
     #about {
-        justify-content: center;
-        padding-top: 10px;
+      justify-content: center;
+      padding-top: 10px;
     }
+  
     .about-text {
-        width: 90%;
-        padding-left: 20px;
+      width: 90%;
+      padding-left: 20px;
     }
+  
     .about-text h1 {
-        font-size: 4rem;
+      font-size: 4rem;
     }
-}
-@media (max-width:800px) {
+  }
+  
+  /* Extra small-sized screens (max-width: 800px) */
+  @media (max-width: 800px) {
+    /* Adjust the styles as needed for extra small-sized screens */
     #main {
-        background-image: none !important;
+      background-image: none !important;
     }
+  
     .name {
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
+  
     .image {
-        display: none;
+      display: none;
     }
+  
     #about {
-        justify-content: center;
-        padding-top: 0px;
+      justify-content: center;
+      padding-top: 0px;
     }
+  
     .about-text {
-        width: 90%;
+      width: 90%;
     }
+  
     .about-text h1 {
-        font-size: 4rem;
+      font-size: 3rem;
     }
-}
-@media(max-width:600px) {
+  }
+  
+  /* Extra extra small-sized screens (max-width: 600px) */
+  @media (max-width: 600px) {
+    /* Adjust the styles as needed for extra extra small-sized screens */
     .toggle {
         display: block;
-    }
-    .toggle:before {
+      }
+    
+      .toggle:before {
         content: '\f0c9';
         font-family: fontAwesome;
         line-height: 0px;
         margin-left: -30px;
-    }
-    .toggle.active:before {
+      }
+    
+      /* Initially hide the menu */
+      .toggle + menu{
+        display: none;
+      }
+    
+      .toggle.active:before {
         content: '\f00d';
-    }
-    #icon {
-        width: 20px;
-    }
-    nav {
-        padding: 10px 30px; 
-    }
-    nav ul {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-        top: 50px;
-        left: 0;
-        transition: 0.5s;
-        overflow: hidden;
-        display: none !important;
-        margin: 0px;
-        padding: 0px;
-    }
-    nav ul li a {
-        border-bottom: 1px solid rgba(255,255,255,0.100);
-        width: 100%;
-        height: 50px;
+      }
+    
+      /* Show the menu when the toggle is clicked */
+      .toggle.active + nav ul {
         display: block;
-        justify-content: center;
-        align-items: center;
-        margin: 0px !important; 
-        padding: 0px !important;
-        text-align: center;
+      }
+  
+    #icon {
+      width: 20px;
     }
+  
+    nav {
+      padding: 10px 30px;
+    }
+  
+    nav ul {
+      position: absolute;
+      height: auto;
+      box-sizing: border-box;
+      top: 100%;
+      transition: 0.5s;
+      overflow: hidden;
+      display: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    nav ul li a {
+      width: 100%;
+      height: 50px;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+  
     .active-menu {
-        display: block !important;
+      display: block;
     }
+  
     .main {
-        background-image: none !important;
+      background-image: none !important;
     }
+  
     .name {
-        width: 90%;
+      width: 90%;
     }
+  
     #about {
-        width: auto;
-        left: 4%;
+      width: auto;
+      left: 4%;
     }
+  
+    .about-text {
+      font-size: 1px;
+    }
+  
     #experience {
-        width: auto;
+      width: auto;
     }
+  
     .e-container {
-        width: 90%;
-    } 
+      width: 90%;
+    }
+  
     #contact-btn h1 {
-        font-size: 1.4rem;
-        text-align: center;
+      font-size: 1.4rem;
+      text-align: center;
     }
+  
     #contact-form {
-        padding: 20px;
-        height: auto;
-        box-sizing: border-box;
+      padding: 20px;
+      height: auto;
+      box-sizing: border-box;
     }
-}
-#preloader {
-    background: #000 url(/assets/loading/loader.gif) no-repeat center center;
-    background-size: 15%;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-}
+  }
+  
+
