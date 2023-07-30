@@ -34,7 +34,7 @@ a {
     position: relative;
     background-image: url(/assets/images/wilson.png);
     background-repeat: no-repeat;
-    background-size: 600px;
+    background-size: 500px;
     background-position: right bottom;
     overflow: hidden;
 }
