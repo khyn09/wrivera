@@ -32,9 +32,8 @@ a {
     height: 100vh;
     background-color: var(--primary-color);
     position: relative;
-    background-image: url(/assets/images/wilson.png);
     background-repeat: no-repeat;
-    background-size: 600px;
+    background-size: 40%;
     background-position: right bottom;
     overflow: hidden;
 }
@@ -42,21 +41,22 @@ span {
     color: #17d1ac;
 }
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-    font-weight: 650;
-    letter-spacing: 2px;
-    font-family: poppins;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px 50px;
-    background-color: #FFFFFF;
-    z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 650;
+  letter-spacing: 2px;
+  font-family: poppins;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 50px;
+  border-bottom: 0.5px dashed var(--secondary-color);
+  backdrop-filter: blur(5px);
+  z-index: 1;
 }
 nav ul {
     list-style: none;
@@ -70,39 +70,38 @@ nav ul li {
 #icon {
     width: 25px;
     cursor: pointer;
+
 }
+
 .menu {
     display: flex;
 }
 .menu li a {
     padding: 10px 15px;
-    color: #010101;
     font-size: 12px;
 }
 .logo {
     font-size: 25px;
     font-weight: bold;
-    color: #000000;
+    color: var(--secondary-color);
     font-family: Poppins;
 }
-/* Reset default list styles */
+
 ul.menu {
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
-  /* Style the menu items */
   ul.menu li {
     display: inline-block;
-    position: relative; /* Needed to position the pseudo-element */
-    margin-right: 20px; /* Add spacing between menu items */
+    position: relative;
+    margin-right: 20px;
   }
   
-  /* Style the menu links */
   ul.menu li a {
     text-decoration: none;
-    color: #333;
+    color: var(--secondary-color);
     padding: 5px;
     transition: border-bottom 0.3s; /* Add smooth transition to the bottom line */
   }
@@ -127,33 +126,40 @@ ul.menu {
 }
 
 .name {
-    font-family: Poppins;
-    width: 500px;
-    position: absolute;
-    left: 21%;
-    top: 50%;
-    transform: translate(-20%,-50%);
-    color: var(--secondary-color);
-    
+  font-family: Poppins;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  position: relative;
+  padding: 20vm;
+  min-height: 100vh; /* Use min-height instead of height for flexibility */
+  text-align: center; /* Center-align text content */
+  box-sizing: border-box;
 }
-.name h2 {
-    color: var(--secondary-color);
-    font-size: px;
-    font-weight: bolder;
-    letter-spacing: 5px;
-    text-transform: uppercase;
 
+.name h2 {
+  color: var(--secondary-color);
+  font-weight: bolder;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin: 0;
 }
+
 .name .details {
-    color: var(--secondary-color);
-    font-size: 15px;
+  color: var(--secondary-color);
+  margin-top: 5px;
+  padding: 30px;
 }
+
 .name h1 {
-    font-family: Poppins;
-    font-size: 50px;
-    margin: 0px;
-    letter-spacing: 3px;
+  font-family: Poppins;
+  font-size: 3.5vw;
+  margin: 0;
+  letter-spacing: 3px;
 }
+
 .social {
     position: absolute;
     left: 164px;
@@ -588,8 +594,8 @@ button:hover {
     /* Adjust the styles as needed for extra extra small-sized screens */
     .toggle {
         display: block;
+        color: var(--secondary-color);
       }
-    
       .toggle:before {
         content: '\f0c9';
         font-family: fontAwesome;
@@ -601,7 +607,6 @@ button:hover {
       .toggle + menu{
         display: none;
       }
-    
       .toggle.active:before {
         content: '\f00d';
       }
@@ -610,6 +615,7 @@ button:hover {
       .toggle.active + nav ul {
         display: block;
       }
+ 
     #main {
       width: auto;
     }
@@ -626,11 +632,13 @@ button:hover {
       height: auto;
       box-sizing: border-box;
       top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
       transition: 0.5s;
       overflow: hidden;
-      display: none;
-      margin: 0;
-      padding: 0;
+      width: 150px;
+      text-align: center;
+
     }
   
     nav ul li a {
@@ -638,7 +646,6 @@ button:hover {
       height: 50px;
       display: block;
       margin: 0;
-      padding: 0;
       text-align: center;
     }
 
@@ -655,7 +662,7 @@ button:hover {
     }
   
     .name {
-      width: 90%;
+      width: 100%;
     }
 
     .name h1 {
