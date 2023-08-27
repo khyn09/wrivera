@@ -9,6 +9,7 @@
         <link rel="icon" type="image/png" href="assets/web_icon/khyn_icon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/c8e4d183c2.js" 
         crossorigin="anonymous"></script> 
@@ -16,10 +17,10 @@
     <body>
         <section id="main">
             <nav>
-                <a href="#" class="logo">khyn</a>
                 <div class="toggle"></div>
+                <a href="#" class="logo">khyn</a>
                 <ul class="menu">
-                    <li><a href="#main" class="active">Home</a></li>
+                    <li><a href="#main">Home</a></li>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#services">Hobbies</a></li>
@@ -36,16 +37,18 @@
         <!---about-section-->
         <section id="about">
             <div class="main">
-                <img src="assets/images/khyn.jpg" class="image">
+                    <img src="assets/images/khyn.jpg" class="image">
                 <div class="about-text">
-                    <h2>About Me</h2>
-                    <h5>Aspiring Frontend Developer</h5>
-                    <p>Name: Wilson Rivera <br />
-                    Address: San Mateo, Rizal - 1850 <br />
-                    Course: Bachelor of Science in Information Technology <br />
-                    Bachelor level: Undergraduate
-                    </p>
-                    <button onclick="location.href='resume/Wilsonrivera.pdf';">Download</button>
+                    <div class="about-box">
+                        <h2>About Me</h2>
+                        <h5>Aspiring Frontend Developer</h5>
+                        <p>Name: Wilson Rivera <br />
+                        Address: San Mateo, Rizal - 1850 <br />
+                        Course: Bachelor of Science in Information Technology <br />
+                        Bachelor level: Undergraduate
+                        </p>
+                        <button onclick="location.href='resume/Wilsonrivera.pdf';">DOWNLOAD CV</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -130,38 +133,38 @@
             </div>
         </section>
 <!---footer-->
-<section id="contact">
-    <section class="footer-section">
-        <div class="footer-heading">
-            <h2>Get in Touch</h2>
-        </div>
+<footer>
+    <section id="contact">
+        <div class="footer-section">
+        <a href="#" class="logo-footer">khyn</a>
         <div class="footer-content">
-            <div class="footer-logo">
+            <ul class="menu-footer">
+                <li><a href="#main" class="active">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#services">Hobbies</a></li>
+            </ul>
+        </div>
+        <div class="footer-nav">
+            <div class="footer-icon">
                 <a href="https://www.facebook.com/kynnrivera09"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://twitter.com/_abcdefg_9"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.instagram.com/rivera_khyn/"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.tiktok.com/@mi_ming09"><i class="fab fa-tiktok"></i></a>
             </div>
-        <div class="contact-info">
-            <p>Email: khynrivera@gmail.com</p>
-            <p>Phone: +639677887914</p>
-         </div>
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>Email: khynrivera@gmail.com</p>
+                <p>Phone: +639677887914</p>
+            </div>
+        </div>
         </div>
     </section>
-</section>  
-
-
-
-
-
-
-
-
-
-
+</footer>
+ 
         <script type="text/javascript" src="js/script.js"></script>
         <script type="text/javascript" src="js/mode.js"></script>
         <script type="text/javascript" src="js/toggle.js"></script>
-        <script type="text/javascript" src="js/loader.js"></script>
+        <script type="text/javascript" src="js/nameAnimation.js"></script>
     </body>
 </html>
