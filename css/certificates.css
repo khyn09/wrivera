@@ -125,11 +125,11 @@ html {
     }
 
     .image {
-        max-width: 100%;
+        max-width: 90%;
         height: auto;
     }
 
     .image:hover {
-        max-width: 110%;
+        max-width: 100%;
     }
 }
