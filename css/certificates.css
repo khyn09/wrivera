@@ -1,0 +1,135 @@
+@charset "uts-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --font-color-dark: #121212;
+    --font-color-light: #F5F5F5;
+    --primary-color:  #121212;
+    --secondary-color: #F5F5F5;
+    --fontweb-h1: 4.5rem;
+    --fontweb-h2: 3rem;
+    --fontweb-p: 1rem;
+    --fontmobile-p: 1rem;
+    --fontmobile-h2: 2rem;
+    --fontmobile-h1: 3rem;
+}
+.dark-theme {
+    --primary-color: #F5F5F5; 
+    --secondary-color: #121212;
+}
+
+.websize {
+  --fontweb-h1: 4.5rem;
+  --fontweb-h2: 3rem;
+  --fontweb-p: 1rem;
+}
+
+.mobilesize {
+  --fontmobile-p: 1rem;
+  --fontmobile-h2: 2rem;
+  --fontmobile-h1: 3rem;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--primary-color);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/*---------CERTIFICATES-SECTION---------*/
+
+#cert-section {
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificates {
+    text-align: center;
+    width: 100%;
+
+}
+
+.back {
+    width: 20px;
+    cursor: pointer;
+}
+
+.certificates h1 {
+    font-size: var(--fontweb-h2);
+    font-family: Poppins;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.cert-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 50px;
+}
+
+.cert-text {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.cert-text p {
+    font-family: Poppins;
+    font-size: var(--fontweb-p);
+}
+
+.image {
+    max-width: 50%;
+    height: auto;
+    transition: max-width 0.3s ease;
+}
+
+.image:hover {
+    max-width: 75%;
+    transition-delay: 0.3s;
+}
+
+#icon {
+    width: 25px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+    #cert-section {
+        height: auto;
+    }
+
+    .certificates h1 {
+        font-size: var(--fontmobile-h2);
+    }
+
+    .cert-text {
+        font-size: var(--fontmobile-p);
+    }
+
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .image:hover {
+        max-width: 110%;
+    }
+}

@@ -1,0 +1,407 @@
+@charset "uts-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --font-color-dark: #121212;
+    --font-color-light: #F5F5F5;
+    --primary-color:  #121212;
+    --secondary-color: #F5F5F5;
+    --fontweb-h1: 4.5rem;
+    --fontweb-h2: 3rem;
+    --fontweb-p: 1rem;
+    --fontmobile-p: 1rem;
+    --fontmobile-h2: 2rem;
+    --fontmobile-h1: 3rem;
+}
+.dark-theme {
+    --primary-color: #F5F5F5; 
+    --secondary-color: #121212;
+}
+
+.websize {
+  --fontweb-h1: 4.5rem;
+  --fontweb-h2: 3rem;
+  --fontweb-p: 1rem;
+}
+
+.mobilesize {
+  --fontmobile-p: 1rem;
+  --fontmobile-h2: 2rem;
+  --fontmobile-h1: 3rem;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.toggle {
+  display: block;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.toggle:before {
+  content: '\f0c9';
+  font-family: fontAwesome;
+  line-height: 0px;
+  margin-left: -30px;
+}
+
+.toggle.active:before {
+  content: '\f00d';
+}
+#main {
+    height: 100vh;
+
+    background-color: var(--primary-color);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: right bottom;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 650;
+  letter-spacing: 2px;
+  font-family: poppins;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 20px;
+  border-bottom: 0.5px solid var(--secondary-color);
+  z-index: 1;
+  background-color: var(--primary-color);
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    display: inline-block;
+}
+#icon {
+    width: 22px;
+    cursor: pointer;
+}
+
+.logo {
+  letter-spacing: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  font-family: Poppins;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--primary-color);
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.toggle.active ~ .menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #6a6a6a58;
+}
+
+
+.menu li {
+  margin: 0;
+  padding: 15px 20px;
+  text-align: left;
+  border-top: 1px solid #6a6a6a58;
+}
+
+.menu li a {
+    padding: 10px 15px;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: var(--secondary-color);
+}
+
+.menu li a:hover {
+  color: #50C878;
+}
+
+
+/*--------WAG NANG GAGALAWIN--------*/
+  
+.name {
+  font-family: Poppins;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 100px;
+}
+
+.name h2 {
+  color: var(--secondary-color);
+  font-weight: bolder;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: var(--fontweb-h2);
+}
+
+.name .details {
+  color: var(--secondary-color);
+  margin-top: 5px;
+  padding-top: 30px;
+  justify-content: center;
+  align-content: center;
+  font-size: var(--fontweb-p);
+}
+
+.name h1 {
+  font-family: 'Bebas Neue', sans-rif;
+  margin: 0;
+  letter-spacing: 3px;
+  font-size: var(--fontweb-h1);
+}
+
+span {
+  color: #50C878;
+  font-family: 'Bebas Neue', sans-rif;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  font-weight: 500;
+}
+
+/*--------WAG NANG GAGALAWIN--------*/
+
+.scroll-icon {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 1.5s infinite;
+  visibility: visible;
+  cursor: pointer;
+  transition: visibility 0.3s;
+}
+
+.scroll-icon.hidden {
+  visibility: hidden;
+}
+
+.mouse {
+  width: 20px;
+  height: 35px;
+  border: 2px solid #50c87869;
+  border-radius: 20px;
+  position: relative;
+}
+
+.wheel {
+  width: 8px;
+  height: 12px;
+  background-color: #50c87869;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Add bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/*--------ABOUT-SECTION-------*/
+#about {
+  height: 100vh;
+  background-color: var(--primary-color);
+}
+
+.image {
+  padding-top: 70px;
+  max-width: 35%;
+  height: auto;
+  margin-right: 20px;
+}
+
+
+/*-------fadein--------*/
+.fade-in-left {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 1s, transform 1s;
+}
+
+.fade-in-left.fade-out {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+/*-------fadein--------*/
+
+.container-about {
+  padding: 55px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-box {
+  padding: 60px;
+  font-family: Poppins;
+}
+
+.about-text {
+  text-align: left;
+  color: var(--secondary-color);
+  
+}
+
+.about-text h2 {
+  font-size: var(--fontweb-h2);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.about-text h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: var(--fontweb-p);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Style the download button */
+button {
+  font-style: Poppins;
+  background-color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 10px 10px 0px 0px var(--secondary-color);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  color: var(--secondary-color);
+  letter-spacing: 1.5px;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  box-shadow: 15px 15px 0px 0px var(--secondary-color);
+}
+
+@media only screen and (max-width: 600px) {
+  
+  #main {
+  height: auto;
+
+  }
+  
+  .name {
+    align-items: center;
+    text-align: center;    
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .name h2 {
+    font-size: var(--fontmobile-h2);
+  }
+  .name h1 {
+    font-size: var(--fontmobile-h1);
+  }
+
+  .name .details {
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+/*----------about-------*/
+#about {
+  height: 100%;
+}  
+
+.container-about {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-text h2 {
+  font-size: var(--fontmobile-h2);
+}
+
+.about-text h5 {
+  font-size: 1.5rem;
+}
+
+.image {
+    display: none;
+  }
+
+.scroll-icon {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+}
+
+
