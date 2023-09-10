@@ -572,7 +572,7 @@ textarea[id="message"] {
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: lighter;
-  color: var(--font-color-light);
+  color: #F5F5F5;
 }
 
 .footer-icon {
@@ -643,8 +643,11 @@ textarea[id="message"] {
 
   #about {
     height: 100%;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
+
+
   .about-box h2 {
     font-size: 20px;
     text-underline-offset: 10px;
@@ -663,6 +666,10 @@ textarea[id="message"] {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
+  }
+
+  .container-about[data-aos="zoom-in"] {
+    transition: 0ms;
   }
   .image {
     display: none;

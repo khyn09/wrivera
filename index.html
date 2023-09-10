@@ -9,10 +9,9 @@
         <link rel="icon" type="image/png" href="assets/web_icon/khyn_icon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
         <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     </head>
     <div id="preloader">
         <div id="status">&nbsp;</div>
@@ -31,7 +30,7 @@
                 </ul>
                 <img src="assets/mode/sun.png" id="icon">
             </nav>
-            <div class="name">
+            <div class="name" data-aos="fade-up" data-aos-delay="400">
                 <h2>Hello,</h2>
                 <h1>I'm Wilson Rivera</h1>
                 <p>P.s: This is not fully responsive to different types of screens.</p>
@@ -45,8 +44,8 @@
 <!---------------------------------ABOUT-SECTION---------------------------------------->
         <section id="about">
             <div class="container-about">
-                <img src="assets/images/khyn.jpg" class="image fade-in-left">
-                <div class="about-box">
+                <img src="assets/images/khyn.jpg" class="image" data-aos="zoom-in" data-aos-delay="300">
+                <div class="about-box" data-aos="fade-left" data-aos-delay="400">
                     <div class="about-text">
                         <h2>About Me</h2>
                         <h5>Aspiring <span id="typed-output"></span> </h5>
@@ -61,7 +60,7 @@
             <div class="contact-container">
                 <!-- Form -->
                 <div class="contact-form">
-                    <h2>Contact Me</h2>
+                    <h2 data-aos="zoom-in" data-aos-delay="200">Contact Me</h2>
                     <form action="#" method="post">
                         <div class="form-group">
                             <label for="name">Name:</label>
@@ -89,7 +88,7 @@
 
                 <!-- Combined Contact Info, Form, and Map -->
                 <div class="contact-info">
-                    <h2>Contact Information</h2>
+                    <h2 data-aos="zoom-in" data-aos-delay="200">Contact Information</h2>
                     <p>Email: khynrivera@gmail.com</p>
                     <p>Phone: +63677887914</p>
                     <div class="map-container">
@@ -129,6 +128,10 @@
     <script src="script/img-fade-out.js"></script>
     <script src="script/typing.js"></script>
     <script src="script/loading.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </head>
 </html>
