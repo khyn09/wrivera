@@ -15,7 +15,7 @@ window.ARCHIVE_CONTENT = {
     email: 'khynrivera@gmail.com',
     resume: { label: 'Download Resume', href: 'Resume/Rivera-Wilson_Resume.pdf', available: true },
     socials: [
-      { label: 'LinkedIn', handle: 'linkedin.com/in/wilson-rivera', href: 'https://linkedin.com/in/wilson-rivera' }
+      { label: 'LinkedIn', handle: 'linkedin.com/in/wilson-rivera', href: 'https://www.linkedin.com/in/wilson-rivera-18b51b438/' }
     ]
   },
   work: [
